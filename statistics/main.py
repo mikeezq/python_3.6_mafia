@@ -1,8 +1,8 @@
-from database.migrations import copy_databases
+from database.migrations import copy_data
 
 
 def main():
-    copy_databases()
+    copy_data()
 
 
 if __name__ == "__main__":

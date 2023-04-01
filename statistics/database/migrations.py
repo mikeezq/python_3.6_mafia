@@ -56,7 +56,3 @@ def copy_data():
                     for row in reader:
                         cursor.execute(query, row)
                         connection.commit()
-
-
-create_tables()
-copy_data()

@@ -10,3 +10,5 @@ Tender hack top 1
   - `docker exec -it $container_id psql -U $POSTGRES_USER -d $POSTGRES_DB` (container id from `docker ps`)
 - очистить значения добавленные в базу и удалить контейнер:
   - `docker-compose down --volumes`
+
+To run locally upload csv files in statistics/tabels from `https://disk.yandex.ru/d/5_L-WhPOnz4zZw`

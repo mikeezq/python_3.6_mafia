@@ -1,0 +1,119 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tender Hack</title>
+    </head>
+
+    <body>
+
+
+        <div class = "our">
+            <div class="d1">
+                <form method ="post" action="/">
+                <input type="text" name ="target" placeholder="Введите запрос..." value="{{ right }}" >
+                    <button type="submit" > Поиск </button>
+                </form>
+                <form method ="post" action="/redirect">
+                    <button type="submit" class="dashboard-btn"> Dashboards </button>
+                </form>
+            </div>
+        </div>
+
+        {% if result[0] %}
+            <div class="container">
+                {% for item in result %}
+                    <aside class="profile-card">
+                        <div class = "name">
+                            <h1>{{ item }}</h1>
+                        </div>
+                    </aside>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+    </body>
+    <style>
+
+    body {
+        font-size: 16px;
+    }
+
+    button[type="submit"] {
+        background: #44944A;
+        min-width: 100px;
+        min-height: 30px;
+        border-radius: 3px;
+    }
+    button {
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+    background-color: #30BA8F;
+    }
+
+    button:active {
+    background-color: #D84B4D;
+    }
+
+    .our {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+
+    form {
+        display: flex;
+        align-items: center;
+    }
+
+
+    input[type="text"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 300px;
+    }
+
+
+    .d1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 25%;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .profile-card {
+      background: #E0FAFA;
+      box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+      margin: 10px;
+      padding: 20px;
+      border-radius: 4px;
+      display: inline-block;
+      width: calc(33.33% - 20px);
+      /* измените ширину элемента на свое усмотрение */
+    }
+
+    .dashboard-btn {
+        float: right;
+        margin-left: 10px;
+    }
+
+    .name {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    </style>
+</html>

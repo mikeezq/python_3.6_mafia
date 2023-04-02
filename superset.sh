@@ -8,7 +8,7 @@ docker run -d --net=app_net -p 5432:5432 --name postgresql \
   -v my-data:/var/lib/postgresql/data \
   postgres:14
 
-docker run -d --net=app_net -p 80:8088 --name superset \
+docker run -d --net=app_net -p 8080:8088 --name superset \
   -e SUPERSET_SECRET_KEY=4546yyvnerij3inrgreeoj5jg0jr0ivj5440v40fjr30fj0fjwr \
   -e SUPERSET_FEATURE_EMBEDDED_SUPERSET=True \
   -e PUBLIC_ROLE_LIKE_GAMMA=True \
